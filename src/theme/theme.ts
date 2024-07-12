@@ -36,12 +36,14 @@ interface Color {
   primary: string;
   light: string;
   dark: string;
+  transparent: string;
 }
 
 export const COLORS: Color = {
   primary: '#0078BE',
   light: '#FFF',
   dark: '#121212',
+  transparent: 'transparent',
 };
 
 interface FontFamily {

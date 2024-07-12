@@ -3,7 +3,7 @@
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import React from 'react';
 import {StyleSheet} from 'react-native';
-import {Icon} from '../components/atom/Icon';
+import {Icon} from '../components';
 import {HomeScreen} from '../screens/HomeScreen';
 import {COLORS, SPACING} from '../theme/theme';
 
@@ -51,18 +51,10 @@ export const TabNavigator = () => {
 const styles = StyleSheet.create({
   tabBarStyle: {
     height: SPACING.space_36 * 2,
-    position: 'absolute',
     backgroundColor: COLORS.dark,
     borderTopWidth: 0,
     elevation: 0,
     borderTopColor: 'transparent',
-  },
-  BlurViewStyles: {
-    position: 'absolute',
-    top: 0,
-    bottom: 0,
-    left: 0,
-    right: 0,
   },
 });
 

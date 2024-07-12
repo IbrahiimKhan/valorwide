@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.dark,
   },
   safeView: {
-    flex: 1,
-    paddingVertical: SPACING.space_24,
+    height: '100%',
+    paddingHorizontal: SPACING.space_24,
   },
 });

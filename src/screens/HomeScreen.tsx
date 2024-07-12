@@ -1,11 +1,12 @@
 import React from 'react';
-import {Text} from 'react-native';
-import {Screen} from '../components';
+import {Text, View} from 'react-native';
+import {Header, Screen} from '../components';
+import HStack from '../components/atom/HStack';
 
 export const HomeScreen = () => {
   return (
     <Screen>
-      <Text>HomeScreen</Text>
+      <Header name={'bell'} type="feather" color="light" />
     </Screen>
   );
 };

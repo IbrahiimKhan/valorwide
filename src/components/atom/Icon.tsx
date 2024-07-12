@@ -49,7 +49,7 @@ export interface VectorIconProps {
 export const Icon: FC<VectorIconProps> = ({
   type = 'material',
   name,
-  size = 'space_32',
+  size = 'space_24',
   color = 'primary',
   ...rest
 }): ReactElement => {

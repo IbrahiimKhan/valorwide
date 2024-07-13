@@ -1,0 +1,41 @@
+[
+  {
+    "ID": 1,
+    "Name": "Classic Package ",
+    "Date": "1 July,2024",
+    "Price": "$50 - $999",
+    "PriceStart": 50,
+    "PriceEnd": 999,
+    "Currency": "USD",
+    "Bonus": "50",
+    "Duration": 1,
+    "MonthlyReturn": "1 Year: 0.00%",
+    "MaturityBonus": 1
+  },
+  {
+    "ID": 2,
+    "Name": "GOLD pACKAGE",
+    "Date": "3 July,2024",
+    "Price": "$1000 - $4999",
+    "PriceStart": 1000,
+    "PriceEnd": 4999,
+    "Currency": "USD",
+    "Bonus": "100",
+    "Duration": 1,
+    "MonthlyReturn": "1 Year: 7%",
+    "MaturityBonus": 2
+  },
+  {
+    "ID": 3,
+    "Name": "platinum",
+    "Date": "10 July,2024",
+    "Price": "$5000 - above",
+    "PriceStart": 5000,
+    "PriceEnd": 0,
+    "Currency": "USD",
+    "Bonus": "500",
+    "Duration": 2,
+    "MonthlyReturn": "1 Year: 9%, 2 Year: 14%",
+    "MaturityBonus": 3
+  }
+]

@@ -36,6 +36,7 @@ interface Color {
   primary: string;
   light: string;
   dark: string;
+  gray: string;
   transparent: string;
 }
 
@@ -43,6 +44,7 @@ export const COLORS: Color = {
   primary: '#0078BE',
   light: '#FFF',
   dark: '#121212',
+  gray: '#00457C',
   transparent: 'transparent',
 };
 

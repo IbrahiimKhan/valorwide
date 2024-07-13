@@ -6,6 +6,7 @@ import {StyleSheet} from 'react-native';
 import {Icon} from '../components';
 import {HomeScreen} from '../screens/HomeScreen';
 import {COLORS, SPACING} from '../theme/theme';
+import ProfileScreen from '../screens/ProfileScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -33,7 +34,7 @@ export const TabNavigator = () => {
       />
       <Tab.Screen
         name="Profile"
-        component={HomeScreen}
+        component={ProfileScreen}
         options={{
           tabBarIcon: ({focused, color, size}) => (
             <Icon

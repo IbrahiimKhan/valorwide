@@ -37,15 +37,19 @@ interface Color {
   light: string;
   dark: string;
   gray: string;
+  lightGray: string;
   transparent: string;
+  warning: string;
 }
 
 export const COLORS: Color = {
   primary: '#0078BE',
   light: '#FFF',
   dark: '#121212',
-  gray: '#00457C',
+  gray: '#3d3d3d',
+  lightGray: '#A3A3A3',
   transparent: 'transparent',
+  warning: '#FEB844',
 };
 
 interface FontFamily {

@@ -1,12 +1,12 @@
 /* eslint-disable react/no-unstable-nested-components */
-/* eslint-disable @typescript-eslint/no-unused-vars */
+
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import React from 'react';
 import {StyleSheet} from 'react-native';
 import {Icon} from '../components';
 import {HomeScreen} from '../screens/HomeScreen';
-import {COLORS, SPACING} from '../theme/theme';
 import ProfileScreen from '../screens/ProfileScreen';
+import {SPACING} from '../theme/theme';
 
 const Tab = createBottomTabNavigator();
 
@@ -23,7 +23,7 @@ export const TabNavigator = () => {
         name="Home"
         component={HomeScreen}
         options={{
-          tabBarIcon: ({focused, color, size}) => (
+          tabBarIcon: ({focused}) => (
             <Icon
               type="octicon"
               name="home"
@@ -36,7 +36,7 @@ export const TabNavigator = () => {
         name="Profile"
         component={ProfileScreen}
         options={{
-          tabBarIcon: ({focused, color, size}) => (
+          tabBarIcon: ({focused}) => (
             <Icon
               type="octicon"
               name="person"
@@ -52,7 +52,7 @@ export const TabNavigator = () => {
 const styles = StyleSheet.create({
   tabBarStyle: {
     height: SPACING.space_36 * 2,
-    backgroundColor: COLORS.dark,
+    backgroundColor: 'black',
     borderTopWidth: 0,
     elevation: 0,
     borderTopColor: 'transparent',

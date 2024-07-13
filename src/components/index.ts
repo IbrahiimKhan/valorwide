@@ -9,3 +9,4 @@ export * from './molecule/ExpiryCard';
 
 //organisms
 export * from './organism/PackageCard';
+export * from './organism/ProfileInfoCard';

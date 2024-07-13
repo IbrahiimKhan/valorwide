@@ -1,10 +1,10 @@
-import React, {FC, useCallback, useEffect, useState} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 import {FlatList, StyleSheet, Text} from 'react-native';
 import {getPackages} from '../api/apiCall';
 import {ExpiryCard, Header, PackageCard, Screen} from '../components';
+import Loader from '../components/atom/Loader';
 import {COLORS, FONTSIZE, SPACING} from '../theme/theme';
 import {PackageData} from '../types';
-import Loader from '../components/atom/Loader';
 
 export const HomeScreen: React.FC = () => {
   const [packages, setPackages] = useState<PackageData[]>([]);
@@ -40,7 +40,7 @@ export const HomeScreen: React.FC = () => {
           <Text style={styles.sectionHeader}>Get FDR Package</Text>
           <ExpiryCard name="info">
             <Text style={styles.text}>
-              You are using
+              You are using{' '}
               <Text style={styles.highlight}>
                 free version only for 30 days
               </Text>

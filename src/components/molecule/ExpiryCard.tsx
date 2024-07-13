@@ -1,9 +1,9 @@
-import {StyleSheet, Text, View} from 'react-native';
 import React, {FC, PropsWithChildren, ReactElement} from 'react';
+import {StyleSheet, View} from 'react-native';
+import {IconProps} from 'react-native-vector-icons/Icon';
+import {COLORS, SPACING} from '../../theme/theme';
 import HStack from '../atom/HStack';
 import Icon from '../atom/Icon';
-import {COLORS, SPACING} from '../../theme/theme';
-import {IconProps} from 'react-native-vector-icons/Icon';
 
 type ExpiryCardProps = IconProps & PropsWithChildren;
 export const ExpiryCard: FC<ExpiryCardProps> = ({

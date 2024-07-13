@@ -3,6 +3,7 @@ export * from './atom/Icon';
 export * from './atom/Screen';
 export * from './atom/Header';
 export * from './atom/Loader';
+export * from './atom/TabBar';
 
 //molecules
 export * from './molecule/ExpiryCard';

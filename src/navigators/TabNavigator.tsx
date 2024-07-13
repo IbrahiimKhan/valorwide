@@ -6,7 +6,7 @@ import {StyleSheet} from 'react-native';
 import {Icon} from '../components';
 import {HomeScreen} from '../screens/HomeScreen';
 import ProfileScreen from '../screens/ProfileScreen';
-import {SPACING} from '../theme/theme';
+import {BORDERRADIUS, SPACING} from '../theme/theme';
 
 const Tab = createBottomTabNavigator();
 
@@ -51,7 +51,7 @@ export const TabNavigator = () => {
 
 const styles = StyleSheet.create({
   tabBarStyle: {
-    height: SPACING.space_36 * 2,
+    height: SPACING.space_36 * 1.5,
     backgroundColor: 'black',
     borderTopWidth: 0,
     elevation: 0,

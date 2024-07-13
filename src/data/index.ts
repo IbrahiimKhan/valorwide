@@ -1,1 +1,76 @@
+import {ProfileInfoCardType} from '../types';
+
 export const tabs = ['Personal Info', 'Wallets', 'Streams'];
+
+export const ProfileInfoCardData: ProfileInfoCardType[] = [
+  {
+    id: 1,
+    leftIcon: 'dollar',
+    title: 'Total Earnings',
+    subtitle: '$7034.00',
+    rightIcon: 'eye',
+    share: false,
+    copy: false,
+    leftIconTye: 'fa',
+  },
+  {
+    id: 2,
+    leftIcon: 'user',
+    title: 'Sponsored by',
+    subtitle: 'Nastia Diadenchukr',
+    rightIcon: 'eye',
+    share: false,
+    copy: false,
+    leftIconTye: 'ant',
+  },
+  {
+    id: 3,
+    leftIcon: 'user',
+    title: 'Personal affiliate team',
+    subtitle: '50 Allies',
+    rightIcon: 'eye',
+    share: false,
+    copy: false,
+    leftIconTye: 'ant',
+  },
+  {
+    id: 4,
+    leftIcon: 'users',
+    title: 'Total team investment',
+    subtitle: '$6240.00',
+    rightIcon: 'eye',
+    share: false,
+    copy: false,
+    leftIconTye: 'feather',
+  },
+
+  {
+    id: 6,
+    leftIcon: 'group',
+    title: 'Team Members',
+    active: 40,
+    inactive: 25,
+    share: false,
+    copy: false,
+    leftIconTye: 'fa',
+  },
+  {
+    id: 7,
+    leftIcon: 'user-check',
+    title: 'Activated on',
+    subtitle: '27-Oct-2022',
+    rightIcon: 'sync',
+    share: false,
+    copy: false,
+    leftIconTye: 'feather',
+  },
+  {
+    id: 8,
+    leftIcon: 'link',
+    title: 'Self rel link',
+    subtitle: 'AB2356',
+    share: true,
+    copy: true,
+    leftIconTye: 'ant',
+  },
+];

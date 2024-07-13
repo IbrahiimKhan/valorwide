@@ -1,6 +1,12 @@
 import React, {useState} from 'react';
 import {Dimensions, StyleSheet, Text, View} from 'react-native';
-import {Header, ProfileInfoCard, Screen, TabBar} from '../components';
+import {
+  Header,
+  PersonalInfoTab,
+  ProfileInfoCard,
+  Screen,
+  TabBar,
+} from '../components';
 import {BORDERRADIUS, COLORS, SPACING} from '../theme/theme';
 import {tabs} from '../data';
 
@@ -10,7 +16,7 @@ export const ProfileScreen = () => {
   const renderContent = () => {
     switch (selectedTab) {
       case 'Personal Info':
-        return <Text>Home Screen</Text>;
+        return <PersonalInfoTab />;
       case 'Wallets':
         return <Text>Settings Screen</Text>;
       case 'Streams':
@@ -43,15 +49,15 @@ export default ProfileScreen;
 const styles = StyleSheet.create({
   container: {
     marginHorizontal: SPACING.space_16,
-    elevation: 5,
     borderBottomLeftRadius: SPACING.space_12,
     borderBottomRightRadius: SPACING.space_12,
+    overflow: 'hidden',
   },
 
   floatingView: {
     width: '100%',
     height: '100%',
-    backgroundColor: COLORS.gray,
+    backgroundColor: COLORS.overlay,
     position: 'absolute',
     top: Dimensions.get('window').height / 4,
     right: 0,
@@ -60,7 +66,8 @@ const styles = StyleSheet.create({
   },
   contentContainer: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    marginHorizontal: SPACING.space_16,
+    marginTop: SPACING.space_36,
+    paddingBottom: SPACING.space_8,
   },
 });

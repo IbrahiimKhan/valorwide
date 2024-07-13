@@ -40,6 +40,7 @@ interface Color {
   lightGray: string;
   transparent: string;
   warning: string;
+  overlay: string;
 }
 
 export const COLORS: Color = {
@@ -50,6 +51,7 @@ export const COLORS: Color = {
   lightGray: '#A3A3A3',
   transparent: 'transparent',
   warning: '#FEB844',
+  overlay: '#2A2A2A',
 };
 
 interface FontFamily {

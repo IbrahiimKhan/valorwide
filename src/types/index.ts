@@ -1,3 +1,5 @@
+import {icons} from '../components';
+
 export interface PackageData {
   ID: number;
   Name: string;
@@ -10,4 +12,18 @@ export interface PackageData {
   Duration: number;
   MonthlyReturn: string;
   MaturityBonus: number;
+}
+
+export interface ProfileInfoCardType {
+  id: number;
+  leftIcon?: string;
+  title: string;
+  subtitle?: string | number;
+  rightIcon?: string;
+  active?: number;
+  inactive?: number;
+  share?: Boolean;
+  copy?: boolean;
+  leftIconTye?: keyof typeof icons;
+  rightIconType?: keyof typeof icons;
 }

@@ -24,7 +24,10 @@ export const HStack: FC<HStackProps> = ({
       style={[
         {flexDirection, justifyContent},
         styles.hStack,
-        {marginVertical: SPACING[vGap] as number, gap: gap} as ViewStyle,
+        {
+          marginVertical: SPACING[vGap] as number,
+          gap: SPACING[gap as keyof typeof SPACING] as number,
+        } as ViewStyle,
       ]}
       {...rest}>
       {children}

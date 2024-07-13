@@ -1,8 +1,10 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
 import {View, TouchableOpacity, Text, StyleSheet} from 'react-native';
-import {COLORS, SPACING} from '../../theme/theme';
+import {COLORS, FONTSIZE, SPACING} from '../../theme/theme';
 import {tabs} from '../../data';
+import Icon from './Icon';
+import HStack from './HStack';
 
 interface TabBarProps {
   selectedTab: string;
@@ -10,9 +12,10 @@ interface TabBarProps {
 }
 
 export const TabBar: React.FC<TabBarProps> = ({selectedTab, onTabPress}) => {
+  const icons: string[] = ['user', 'wallet', 'coins'];
   return (
     <View style={styles.tabBar}>
-      {tabs.map(tab => (
+      {tabs.map((tab, index) => (
         <TouchableOpacity
           key={tab}
           onPress={() => onTabPress(tab)}
@@ -23,9 +26,13 @@ export const TabBar: React.FC<TabBarProps> = ({selectedTab, onTabPress}) => {
               borderRightColor: COLORS.lightGray,
             },
           ]}>
-          <Text style={selectedTab === tab ? styles.activeTab : styles.tabText}>
-            {tab}
-          </Text>
+          <HStack gap="space_10">
+            <Icon name={icons[index]} type="fa5" size="space_15" />
+            <Text
+              style={selectedTab === tab ? styles.activeTab : styles.tabText}>
+              {tab}
+            </Text>
+          </HStack>
         </TouchableOpacity>
       ))}
     </View>
@@ -36,7 +43,7 @@ const styles = StyleSheet.create({
   tabBar: {
     flexDirection: 'row',
     backgroundColor: COLORS.gray,
-    justifyContent: 'space-around',
+    justifyContent: 'space-between',
     borderTopWidth: 0.5,
     borderColor: COLORS.lightGray,
   },
@@ -46,12 +53,12 @@ const styles = StyleSheet.create({
   },
   tabText: {
     color: COLORS.lightGray,
-    paddingVertical: SPACING.space_12,
+    paddingVertical: FONTSIZE.size_10,
   },
   activeTab: {
     fontWeight: 'bold',
     color: COLORS.light,
-    paddingVertical: SPACING.space_12,
+    paddingVertical: FONTSIZE.size_10,
   },
 });
 

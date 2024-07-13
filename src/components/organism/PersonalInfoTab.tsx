@@ -1,9 +1,9 @@
-import {FlatList, StyleSheet, Text, View} from 'react-native';
 import React, {ReactElement, useCallback} from 'react';
-import List from '../molecule/List';
+import {FlatList, StyleSheet, View} from 'react-native';
 import {ProfileInfoCardData} from '../../data';
-import {ProfileInfoCardType} from '../../types';
 import {SPACING} from '../../theme/theme';
+import {ProfileInfoCardType} from '../../types';
+import List from '../molecule/List';
 
 export const PersonalInfoTab = (): ReactElement => {
   // render the card data

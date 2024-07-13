@@ -13,3 +13,5 @@ export * from './molecule/ExpiryCard';
 export * from './organism/PackageCard';
 export * from './organism/ProfileInfoCard';
 export * from './organism/PersonalInfoTab';
+export * from './organism/WalletTab';
+export * from './organism/StreamTab';

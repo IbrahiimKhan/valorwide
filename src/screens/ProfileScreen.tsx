@@ -9,22 +9,10 @@ import {
 } from '../components';
 import {BORDERRADIUS, COLORS, SPACING} from '../theme/theme';
 import {tabs} from '../data';
+import {renderContent} from '../helper/tabHelper';
 
 export const ProfileScreen = () => {
   const [selectedTab, setSelectedTab] = useState<string>(tabs[0]);
-
-  const renderContent = () => {
-    switch (selectedTab) {
-      case 'Personal Info':
-        return <PersonalInfoTab />;
-      case 'Wallets':
-        return <Text>Settings Screen</Text>;
-      case 'Streams':
-        return <Text>stream Screen</Text>;
-      default:
-        return null;
-    }
-  };
 
   return (
     <Screen>
@@ -39,7 +27,7 @@ export const ProfileScreen = () => {
         />
         <TabBar selectedTab={selectedTab} onTabPress={setSelectedTab} />
       </View>
-      <View style={styles.contentContainer}>{renderContent()}</View>
+      <View style={styles.contentContainer}>{renderContent(selectedTab)}</View>
     </Screen>
   );
 };

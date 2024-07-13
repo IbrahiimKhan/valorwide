@@ -7,10 +7,9 @@ import {
   View,
 } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
+import {extractYearlyPercentage, toTitleCase} from '../../helper/stringHelper';
 import {COLORS, FONTSIZE, SPACING} from '../../theme/theme';
 import {PackageData} from '../../types';
-import HStack from '../atom/HStack';
-import {extractYearlyPercentage, toTitleCase} from '../../helper/stringHelper';
 import Icon from '../atom/Icon';
 
 type PackageCardProps = {
@@ -34,6 +33,9 @@ export const PackageCard: FC<PackageCardProps> = ({pack}): ReactElement => {
       </Text>
     ));
 
+  const isRecommended = ID === 2;
+  const isComingSoon = ID === 3;
+
   return (
     <LinearGradient
       colors={['#3D3D3D', '#00457C']}
@@ -50,26 +52,22 @@ export const PackageCard: FC<PackageCardProps> = ({pack}): ReactElement => {
       <TouchableOpacity style={styles.button}>
         <Text style={[styles.basicText, styles.buttonText]}>Select</Text>
       </TouchableOpacity>
-      {ID === 2 ? <Text style={styles.badge}>Recommended</Text> : null}
+      {isRecommended && <Text style={styles.badge}>Recommended</Text>}
       {renderTextRow(
         'Profit:',
         MonthlyReturn.split(',').length > 1
           ? renderMonthlyReturns()
           : extractYearlyPercentage(MonthlyReturn),
       )}
-
-      {renderTextRow(
-        'Maturity:',
-        `${Duration > 1 ? `${Duration} Years` : `${Duration} Year`}`,
-      )}
+      {renderTextRow('Maturity:', `${Duration} Year${Duration > 1 ? 's' : ''}`)}
       {renderTextRow('Bonus:', `${Bonus} tokens`)}
       {renderTextRow('Maturity Bonus:', `${MaturityBonus}% after maturity`)}
-      {ID === 3 ? (
+      {isComingSoon && (
         <View style={styles.comingSoon}>
           <Icon type="simpleLine" name="lock" color="light" size="space_36" />
           <Text style={styles.comingSoonText}>Coming Soon</Text>
         </View>
-      ) : null}
+      )}
     </LinearGradient>
   );
 };

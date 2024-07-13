@@ -140,7 +140,7 @@ const styles = StyleSheet.create({
   },
   comingSoon: {
     ...StyleSheet.absoluteFillObject,
-    backgroundColor: '#00457C',
+    backgroundColor: '#00457CCC',
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: SPACING.space_10,

@@ -21,7 +21,7 @@ export const TabBar: React.FC<TabBarProps> = ({selectedTab, onTabPress}) => {
         key={tab}
         onPress={() => onTabPress(tab)}
         style={[styles.tab, index < tabs.length - 1 && styles.borderRight]}>
-        <HStack gap="space_10">
+        <HStack gap="space_4">
           <Icon name={icons[index]} type="fa5" size="space_15" />
           <Text style={isActive ? styles.activeTab : styles.tabText}>
             {tab}
@@ -52,12 +52,12 @@ const styles = StyleSheet.create({
   },
   tabText: {
     color: COLORS.lightGray,
-    paddingVertical: FONTSIZE.size_10,
+    paddingVertical: FONTSIZE.size_8,
   },
   activeTab: {
     fontWeight: 'bold',
     color: COLORS.light,
-    paddingVertical: FONTSIZE.size_10,
+    paddingVertical: FONTSIZE.size_8,
   },
 });
 

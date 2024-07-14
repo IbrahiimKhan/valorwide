@@ -18,7 +18,7 @@ Before you begin, ensure you have met the following requirements:
 
 First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
 
-To install the dependencies & start Metro, run the following command from the _root_ of your my-care-mobile project dir:
+To install the dependencies & start Metro, run the following command from the _root_ of your valorwide project dir:
 
 ```bash
 yarn
@@ -30,7 +30,7 @@ yarn start
 
 #### Step 2: Start your Application
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your my-care-mobile project dir. Run the following command to start your _Android_ or _iOS_ app:
+Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your valorwide project dir. Run the following command to start your _Android_ or _iOS_ app:
 
 #### For Android
 
@@ -60,7 +60,7 @@ This is one way to run your app — you can also run it directly from within And
 
 <!--- If your README is long or you have some specific process or steps you want contributors to follow, consider creating a separate CONTRIBUTING.md file--->
 
-To contribute to my-care-mobile, follow these steps:
+To contribute to ValorWide, follow these steps:
 
 1. Clone this repository.
 2. Create a branch: `git checkout -b <branch_name>`.

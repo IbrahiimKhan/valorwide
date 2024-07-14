@@ -31,7 +31,7 @@ export const List: FC<ListProps> = ({item}): ReactElement => {
             type={leftIconTye ? leftIconTye : 'material'}
           />
           <View>
-            <Text style={styles.basicText}>{title}</Text>
+            <Text style={[styles.basicText, styles.title]}>{title}</Text>
             {subtitle ? <Text style={styles.basicText}>{subtitle}</Text> : null}
             {active && inactive ? (
               <>
@@ -93,5 +93,8 @@ const styles = StyleSheet.create({
   },
   basicText: {
     color: COLORS.light,
+  },
+  title: {
+    fontWeight: 'bold',
   },
 });

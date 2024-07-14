@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unstable-nested-components */
 import React, {useCallback, useEffect, useState} from 'react';
 import {FlatList, StyleSheet, Text} from 'react-native';
 import {getPackages} from '../api/apiCall';
@@ -56,6 +57,7 @@ export const HomeScreen: React.FC = () => {
             showsHorizontalScrollIndicator={false}
             showsVerticalScrollIndicator={false}
             keyExtractor={keyExtractor}
+            ListEmptyComponent={() => <Text>No Data Found..</Text>}
           />
         </Screen>
       )}

@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, TouchableOpacity, Text, StyleSheet} from 'react-native';
-import {COLORS, FONTSIZE} from '../../theme/theme';
+import {COLORS, FONTSIZE, SPACING} from '../../theme/theme';
 import {tabs} from '../../data';
 import Icon from './Icon';
 import HStack from './HStack';
@@ -51,13 +51,15 @@ const styles = StyleSheet.create({
     borderRightColor: COLORS.lightGray,
   },
   tabText: {
+    fontSize: FONTSIZE.size_12,
     color: COLORS.lightGray,
-    paddingVertical: FONTSIZE.size_8,
+    paddingVertical: SPACING.space_10,
   },
   activeTab: {
+    fontSize: FONTSIZE.size_12,
     fontWeight: 'bold',
     color: COLORS.light,
-    paddingVertical: FONTSIZE.size_8,
+    paddingVertical: SPACING.space_10,
   },
 });
 

@@ -81,6 +81,7 @@ const styles = StyleSheet.create({
     width: Dimensions.get('window').width / 2 - SPACING.space_30,
     paddingHorizontal: SPACING.space_8,
     position: 'relative',
+    marginBottom: SPACING.space_12,
   },
   header: {
     alignItems: 'center',
